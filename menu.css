@@ -39,10 +39,12 @@
     background-color: #0F172A; /* kulay ng background kapag focus */
 } 
 /* nagbibigay estilo sa navigation links kapag active */
-.nav-link:active { 
-    background-color: #0B0F19; /* kulay ng background kapag active */
-    transform: translateY(1px); /* nagbibigay ng effect na parang na-click ang link */
-} 
+.nav-link.active { 
+    background-color: #FFFFFF;    /* Ginagawang kulay puti ang background */
+    color: #111827;               /* Pinasadiyang dark/itim ang kulay ng text para mabasa sa puting background */
+    border-bottom: 4px solid #FFFFFF; /* Kulay puti rin ang border sa ibaba */
+}
+
 /* nagbibigay estilo sa navigation links kapag active at nandoon ang user */
 .nav-link.active { 
     background-color: white; /* kulay ng background kapag active at nandoon ang user */
