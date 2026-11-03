@@ -2,7 +2,6 @@
     .navbar { 
     background-color: #111827; /* kulay ng gray navigation bar background  */
     width: 100%;  /* lapad ng navigation bar */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* nagbibigay ng shadow effect sa navigation bar */
 } 
     /* nagbibigay estilo sa navigation links */
     .nav-link {  
@@ -46,7 +45,7 @@
 } 
 /* nagbibigay estilo sa navigation links kapag active at nandoon ang user */
 .nav-link.active { 
-    background-color: #1F2937; /* kulay ng background kapag active at nandoon ang user */
+    background-color: white; /* kulay ng background kapag active at nandoon ang user */
     border-bottom: 4px solid #38BDF8; /* nagbibigay ng border sa ilalim ng link kapag active at nandoon ang user */
 }  
 /* nagbibigay estilo sa navigation list */
