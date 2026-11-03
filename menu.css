@@ -13,7 +13,6 @@
     font-family: 'Segoe UI', sans-serif; /* font family ng link */
     font-size: 15px; /* laki ng font ng link */
     font-weight: 600; /* bigat ng font ng link */
-    transition: background-color 0.3s ease, color 0.3s ease; /* nagbibigay ng transition effect sa background at color ng link */
 }
 /* nagbibigay estilo sa navigation links kapag hover */
     .nav-link:hover { 
