@@ -1,13 +1,13 @@
 /* nagbibigay kulay sa navigation bar background */
     .navbar { 
-    background-color: #111827; /* kulay ng gray navigation bar background  */
+    background-color: #84b3ce; /* kulay ng gray navigation bar background  */
     width: 100%;  /* lapad ng navigation bar */
 } 
     /* nagbibigay estilo sa navigation links */
     .nav-link {  
     display: block;    /* nagpapakita ng link bilang block element */           
     padding: 14px 20px;      /* padding sa loob ng link */ 
-    color: #94A3B8;               /* kulay ng text ng link */
+    color: #16587b;          /* kulay ng text ng link */
     text-decoration: none;        /* tinatanggal ang underline sa link */
     font-family: 'Segoe UI', sans-serif; /* font family ng link */
     font-size: 15px; /* laki ng font ng link */
@@ -15,28 +15,22 @@
 }
 /* nagbibigay estilo sa navigation links kapag hover */
     .nav-link:hover { 
-    background-color: #1E293B;   /* kulay ng background kapag hover */
-    color: #E2E8F0;               /* kulay ng text kapag hover */
+    background-color: #16587b;   /* kulay ng background kapag hover */
+    color: #84b3ce;               /* kulay ng text kapag hover */
 }
 
 /* nagbibigay estilo sa navigation links kapag active */
 .nav-link:link { 
-    color: #94A3B8; /* kulay ng text ng link kapag active */
+    color: #16587b; /* kulay ng text ng link kapag active */
 }
 /* nagbibigay estilo sa navigation links kapag nandoon ang user */
 .nav-link:visited { 
-    color: #64748B; /* kulay ng text ng link kapag nandoon ang user */
+    color: #16587b; /* kulay ng text ng link kapag nandoon ang user */
 } 
 /* nagbibigay estilo sa navigation links kapag hover */
 .nav-link:hover { 
-    background-color: #1E293B; /* kulay ng background kapag hover */
-    color: #E2E8F0; /* kulay ng text kapag hover */
-} 
-/* nagbibigay estilo sa navigation links kapag focus */
-.nav-link:focus { 
-    outline: 3px solid #38BDF8; /* nagbibigay ng outline sa link kapag focus */
-    outline-offset: -3px; 
-    background-color: #0F172A; /* kulay ng background kapag focus */
+    background-color: #16587b; /* kulay ng background kapag hover */
+    color: #84b3ce; /* kulay ng text kapag hover */
 } 
 /* nagbibigay estilo sa navigation links kapag active */
 .nav-link.active { 
