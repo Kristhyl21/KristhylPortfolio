@@ -54,3 +54,106 @@
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
+/*para sa footer*/
+.footer-container {
+    max-width: 1100px; /* Itinatakda ang pinakamalaking lapad ng footer sa 1100 pixels. */
+    margin: auto; /* Sinisigurong naka-center o nasa gitna ang buong footer container sa screen. */
+    padding: 25px 20px; /* Nagdaragdag ng espasyo sa loob ng footer container sa itaas, ibaba, at mga tagiliran. */
+    display: flex; /* Ginagawang flexible container ang footer para madaling mapagtabi ang mga nilalaman nito. */
+    justify-content: space-between; /* Pinaghihiwalay at inilalagay sa magkabilang dulo ng container ang mga elemento sa loob nito. */
+    align-items: center; /* Pantay na inilalagay sa gitna patayo ang mga nilalaman ng footer. */
+    gap: 40px; /* Nagbibigay ng 40 pixels na espasyo sa pagitan ng mga elemento sa loob ng footer. */
+}
+
+/* Stay Connected */
+.footer-info {
+    max-width: 550px; /* Nililimitahan ang pinakamalaking lapad ng text block sa 550 pixels. */
+}
+
+.footer-info h2,
+.footer-socials h2 {
+    color: #84b3ce; /* Binabago ang kulay ng mga pamagat sa kulay ube. */
+    font-size: 22px; /* Itinatakda ang laki ng font ng mga pamagat sa 22 pixels. */
+    margin-bottom: 15px; /* Nagdaragdag ng espasyo sa ilalim ng mga pamagat. */
+}
+
+.footer-info p {
+    color: #581845; /* Binabago ang kulay ng mga talata sa kulay ube. */
+    font-size: 15px; /* Itinatakda ang laki ng font ng mga talata sa 15 pixels. */
+    line-height: 1.6; /* Pinapalaki ang espasyo sa pagitan ng mga linya ng teksto para mas madaling basahin. */
+}
+
+/* Social Media */
+.footer-socials {
+    text-align: center; /* Inilalagay sa gitna ang mga nakapaloob na teksto o elemento. */
+}
+
+.social-links {
+    display: flex; /* Ginagawang flexible box ang mga social link para magkatabi-tabi sila. */
+    justify-content: center; /* Pinapupunta sa gitna ang mga social link. */
+    gap: 25px; /* Nagbibigay ng 25 pixels na espasyo sa pagitan ng bawat social link. */
+    margin-top: 15px; /* Nagdaragdag ng espasyo sa itaas ng mga social link. */
+}
+
+.social-links a {
+    color: #84b3ce; /* Itinatakda ang kulay ng mga social link sa matingkad na ube o pink. */
+    font-size: 25px; /* Itinatakda ang laki ng mga icon o teksto ng social link sa 25 pixels. */
+    font-weight: bold; /* Ginagawang makapal ang estilo ng font ng mga link. */
+    text-decoration: none; /* Tinatanggal ang guhit sa ilalim ng mga link. */
+    transition: 0.3s; /* Nagdaragdag ng 0.3 segundong bilis para sa maayos na pagbabago kapag tinutok ang mouse. */
+}
+
+.social-links a:hover {
+    color: #16587b; /* Binabago ang kulay ng social link patusok sa mas madilim na ube kapag tinutukan. */
+    transform: scale(1.2); /* Pinalalaki nang bahagya ang social link (20%) kapag tinutukan ng mouse. */
+}
+
+.footer-bottom {
+    background-color: #16587b; /* Nilalagyan ng madilim na ube na kulay ang background ng pinakapabang bahagi. */
+    color: 84b3ce; /* Ginagawang kulay puti ang mga text sa pinakapabang bahagi para mabasa nang maayos. */
+    text-align: center; /* Inilalagay sa gitna ang teksto sa pinakapabang bahagi. */
+    padding: 14px; /* Nagdaragdag ng 14 pixels na espasyo sa paligid ng pinakapabang bahagi. */
+    font-size: 14px; /* Itinatakda ang laki ng font sa pinakapabang bahagi sa 14 pixels. */
+}
+
+@media screen and (max-width: 800px) {
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Binabago ang grid sa dalawang hanay para sa mas maliit na screen. */
+        gap: 20px; /* Binabawasan ang espasyo sa pagitan ng mga elemento ng grid sa 20 pixels. */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Pinagpatong-patong nang pababa ang mga elemento sa halip na magkatabi. */
+        text-align: center; /* Inilalagay sa gitna ang lahat ng teksto sa loob ng footer container. */
+        gap: 25px; /* Nagbibigay ng 25 pixels na espasyo sa pagitan ng mga nakasalansang elemento. */
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Ginagawang iisang hanay na lang ang portfolio grid para sa maliliit na telepono. */
+        gap: 15px; /* Binabawasan ang espasyo sa pagitan ng mga item sa 15 pixels. */
+    }
+
+    .content h1 {
+        font-size: 30px; /* Binabawasan ang laki ng pamagat sa 30 pixels para magkasya nang maayos. */
+    }
+
+    .project-link {
+        font-size: 16px; /* Itinatakda ang laki ng font ng project link sa 16 pixels. */
+    }
+
+    .nav-link {
+        padding: 16px 10px; /* Binabago ang padding sa paligid ng navigation link para mas madaling pindutin sa telepono. */
+        font-size: 14px; /* Binabawasan ang laki ng font ng nav link sa 14 pixels. */
+    }
+
+    .footer-info h2,
+    .footer-socials h2 {
+        font-size: 20px; /* Binabawasan ang laki ng mga pamagat sa 20 pixels. */
+    }
+
+}
