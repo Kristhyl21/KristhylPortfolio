@@ -1,0 +1,132 @@
+
+/* GENERAL DESIGN */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf6ff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* GAME TITLE */
+h1 {
+    color: #2874a6;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* SCORE */
+h2 {
+    color: #ffffff;
+    background-color: #3498db;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* IMAGE CONTAINERS */
+.draggableImage,
+.droppableImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+/* BABY ANIMAL IMAGES */
+.draggable {
+    width: 180px;
+    height: 180px;
+    background-color: #ffffff;
+    border: 3px solid #5dade2;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    transition: 0.3s;
+}
+
+/* MOTHER ANIMAL DROP ZONES */
+.droppable {
+    width: 200px;
+    height: 200px;
+    background-color: #d6eaf8;
+    border: 3px dashed #3498db;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* IMAGES */
+.draggable img,
+.droppable img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+/* DRAGGING EFFECT */
+.draggable:active {
+    cursor: grabbing;
+}
+
+.draggableFormat,
+.dragging {
+    opacity: 0.5;
+}
+
+/* HOVER EFFECT */
+.droppable:hover {
+    background-color: #aed6f1;
+    border-color: #21618c;
+}
+
+/* CORRECT MATCH */
+.droppable.correct {
+    border: 3px solid #2ecc71;
+    background-color: #d5f5e3;
+}
+
+/* MATCHED BABY ANIMAL */
+.draggable.matched {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: transparent;
+    cursor: default;
+    opacity: 1;
+}
+
+/* DISABLE MATCHED DROP ZONE */
+.droppable.matched {
+    pointer-events: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .draggableImage,
+    .droppableImage {
+        gap: 15px;
+    }
+
+    .draggable {
+        width: 130px;
+        height: 130px;
+    }
+
+    .droppable {
+        width: 150px;
+        height: 150px;
+    }
+}

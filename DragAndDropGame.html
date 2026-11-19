@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mommy and Baby Animal Matching Game</title>
+
+    <link rel="stylesheet" href="matchingGame.css">
+    <script src="matchingGame.js" defer></script>
+</head>
+
+<body>
+
+    <center>
+        <h1>!!MOMMY AND BABY ANIMAL MATCHING GAME!!</h1>
+
+        <h2>Match the baby animal pictures with their mommy!</h2>
+
+        <h3 id="score">Score: 0</h3>
+    </center>
+
+    <!-- Draggable Baby Animals -->
+    <div class="draggableImage">
+
+        <div class="draggable" draggable="true" id="drag-duck" data-animal="duck">
+            <img src="./duckling.png" alt="Duckling">
+        </div>
+
+        <div class="draggable" draggable="true" id="drag-dog" data-animal="dog">
+            <img src="./puppy.png" alt="Puppy">
+        </div>
+
+        <div class="draggable" draggable="true" id="drag-cat" data-animal="cat">
+            <img src="./kitten.png" alt="Kitten">
+        </div>
+
+    </div>
+
+    <!-- Mother Animal Drop Zones -->
+    <div class="droppableImage">
+
+        <div class="droppable" data-animal="dog">
+            <img src="./mother_dog.png" alt="Mother Dog">
+        </div>
+
+        <div class="droppable" data-animal="cat">
+            <img src="./mother_cat.png" alt="Mother Cat">
+        </div>
+
+        <div class="droppable" data-animal="duck">
+            <img src="./mother_duck.png" alt="Mother Duck">
+        </div>
+
+    </div>
+
+</body>
+</html>
