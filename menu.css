@@ -54,6 +54,112 @@
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
+.gallery-album {
+    flex: 1; /* Sinasakop ang natitirang espasyo sa layout. */
+    display: flex; /* Ginagawang flexible ang layout ng album. */
+    flex-direction: column; /* Inaayos ang mga elemento nang patayo. */
+    align-items: center; /* Inilalagay sa gitna ang mga elemento nang pahalang. */
+    width: 100%; /* Ginagawang 100% ang lapad ng album. */
+    padding: 25px 10px; /* Nagbibigay ng espasyo sa loob ng album. */
+    text-align: center; /* Inilalagay sa gitna ang mga teksto. */
+    background-color: #16587b; /* Nagbibigay ng mapusyaw na kulay blue sa background. */
+}
+
+.album-title {
+    color: #84b3ce; /* Ginagawang madilim na ube ang kulay ng pamagat. */
+    font-size: 34px; /* Itinatakda ang laki ng pamagat sa 34 pixels. */
+    margin-bottom: 25px; /* Nagbibigay ng 25 pixels na espasyo sa ibaba ng pamagat. */
+}
+
+/* CAROUSEL */
+.carousel {
+    width: 400px; /* Itinatakda ang lapad ng carousel sa 400 pixels. */
+    max-width: 90%; /* Nililimitahan ang lapad sa 90% ng magulang na elemento. */
+    margin: 0 auto; /* Inilalagay sa gitna ang carousel. */
+}
+
+.slides {
+    position: relative; /* Ginagawang batayan ng posisyon ng mga larawan. */
+    width: 100%; /* Ginagawang 100% ang lapad ng slides. */
+    height: 225px; /* Itinatakda ang taas ng slides sa 225 pixels. */
+    overflow: hidden; /* Itinatago ang mga bahaging lumalampas sa slides. */
+    background-color: black; /* Nagbibigay ng itim na background sa slides. */
+    border-radius: 8px; /* Binibilog ang mga sulok ng slides. */
+}
+
+/* IMAGES */
+.slide {
+    position: absolute; /* Pinapayagan ang paglalagay ng slide sa tiyak na posisyon. */
+    inset: 0; /* Inilalagay ang slide sa lahat ng gilid ng slides container. */
+    width: 100%; /* Ginagawang 100% ang lapad ng slide. */
+    height: 100%; /* Ginagawang 100% ang taas ng slide. */
+    margin: 0; /* Tinatanggal ang default na margin ng slide. */
+}
+
+.slide img {
+    width: 100%; /* Ginagawang 100% ang lapad ng larawan. */
+    height: 100%; /* Ginagawang 100% ang taas ng larawan. */
+    object-fit: cover; /* Pinupuno ang lalagyan nang hindi nababago ang proporsyon ng larawan. */
+    display: block; /* Inaalis ang dagdag na espasyo sa ilalim ng larawan. */
+}
+
+.slide figcaption {
+    position: absolute; /* Inilalagay ang caption sa tiyak na posisyon sa larawan. */
+    left: 0; /* Inilalagay ang caption sa kaliwang gilid. */
+    right: 0; /* Inilalagay ang caption sa kanang gilid. */
+    bottom: 0; /* Inilalagay ang caption sa ibabang bahagi ng larawan. */
+    padding: 12px; /* Nagbibigay ng espasyo sa loob ng caption. */
+    background: rgba(0, 0, 0, 0.55); /* Nagbibigay ng bahagyang transparent na itim na background. */
+    color: white; /* Ginagawang puti ang teksto ng caption. */
+    text-align: center; /* Inilalagay sa gitna ang teksto ng caption. */
+}
+
+/* PREVIOUS AND NEXT BUTTONS */
+.nav {
+    position: absolute; /* Pinapayagan ang paglalagay ng button sa tiyak na posisyon. */
+    top: 50%; /* Inilalagay ang button sa gitnang bahagi ng slides. */
+    transform: translateY(-50%); /* Eksaktong isinasentro ang button nang patayo. */
+    z-index: 5; /* Inilalagay ang button sa ibabaw ng ibang elemento. */
+    border: none; /* Tinatanggal ang border ng button. */
+    background: rgba(0, 0, 0, 0.5); /* Nagbibigay ng bahagyang transparent na itim na background. */
+    color: white; /* Ginagawang puti ang kulay ng arrow. */
+    font-size: 22px; /* Itinatakda ang laki ng arrow sa 22 pixels. */
+    padding: 10px 14px; /* Nagbibigay ng espasyo sa loob ng button. */
+    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang button. */
+}
+
+.nav:hover {
+    background: rgba(0, 0, 0, 0.8); /* Pinadidilim ang background kapag tinutukan ang button. */
+}
+
+.prev {
+    left: 8px; /* Inilalagay ang previous button 8 pixels mula sa kaliwa. */
+}
+
+.next {
+    right: 8px; /* Inilalagay ang next button 8 pixels mula sa kanan. */
+}
+
+/* DOTS */
+.dots {
+    text-align: center; /* Inilalagay sa gitna ang mga tuldok. */
+    padding: 12px 0; /* Nagbibigay ng 12 pixels na espasyo sa itaas at ibaba. */
+}
+
+.dot {
+    width: 12px; /* Itinatakda ang lapad ng tuldok sa 12 pixels. */
+    height: 12px; /* Itinatakda ang taas ng tuldok sa 12 pixels. */
+    margin: 0 5px; /* Nagbibigay ng 5 pixels na pagitan sa bawat tuldok. */
+    padding: 0; /* Tinatanggal ang padding ng tuldok. */
+    border: none; /* Tinatanggal ang border ng tuldok. */
+    border-radius: 50%; /* Ginagawang bilog ang tuldok. */
+    background: #b8b8b8; /* Ginagawang kulay abo ang mga hindi aktibong tuldok. */
+    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang tuldok. */
+}
+
+.dot.active {
+    background: #84b3ce; /* Ginagawang madilim na ube ang aktibong tuldok. */
+}
 /*para sa footer*/
 .footer-container {
     max-width: 1100px; /* Itinatakda ang pinakamalaking lapad ng footer sa 1100 pixels. */
