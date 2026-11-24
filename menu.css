@@ -54,6 +54,169 @@
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
+/* Nilalagyan ng comment sa simula ng selector para sa bilog na container ng avatar. */
+.avatar-circle { /* Binubuksan ang CSS rule para sa .avatar-circle. */
+    width: 140px; /* Itinatakda ang lapad ng bilog sa 140 pixels. */
+    height: 140px; /* Itinatakda ang taas ng bilog sa 140 pixels. */
+    border-radius: 50%; /* Ginagawang perpektong bilog ang mga sulok. */
+    background-color: #e3f0f7; /* Naglalagay ng malambot na asul na kulay sa loob ng bilog. */
+    border: 4px solid #a3c9dd; /* Naglalagay ng 4px na border na may kulay asul. */
+    display: flex; /* Ginagawang flex container ang bilog para madaling igitna ang laman. */
+    align-items: center; /* Iginigitna ang laman nang patayo (vertical). */
+    justify-content: center; /* Iginigitna ang laman nang pahalang (horizontal). */
+    overflow: hidden; /* Itinatago ang anumang bahagi ng imahe na lumalampas sa bilog. */
+} /* Sinasara ang CSS rule para sa .avatar-circle. */
+
+/* Binubuksan ang CSS rule para sa mismong profile image. */
+.profile-img { /* Simula ng mga style para sa imahe sa loob ng bilog. */
+    width: 100%; /* Sinasakop ang buong 100% na lapad ng parent container. */
+    height: 100%; /* Sinasakop ang buong 100% na taas ng parent container. */
+    object-fit: cover; /* Pinapuno ang bilog nang hindi nasisira ang proporsyon ng larawan. */
+    border-radius: 50%; /* Pinapanatiling bilog ang hugis ng mismong imahe. */
+} /* Sinasara ang CSS rule para sa .profile-img. */
+
+/* Binubuksan ang CSS rule para sa kaliwang profile card. */
+.profile-card { /* Simula ng layout ng kaliwang bahagi ng card. */
+    flex: 1; /* Binibigyan ng 1 bahagi ng available space sa flex row. */
+    display: flex; /* Ginagawang flex container ang profile card. */
+    flex-direction: column; /* Pinagpapatong-patong nang patayo ang mga laman nito. */
+    align-items: center; /* Iginigitna nang pahalang ang lahat ng laman. */
+    justify-content: center; /* Iginigitna nang patayo ang lahat ng laman. */
+    padding-right: 20px; /* Naglalagay ng 20px na espasyo sa kanang loob ng card. */
+    border-right: 1.5px dashed #cfdfe8; /* Naglalagay ng tuldok-tuldok na linya sa kanang gilid. */
+} /* Sinasara ang CSS rule para sa .profile-card. */
+
+/* Binubuksan ang CSS rule para sa wrapper ng avatar. */
+.avatar-wrapper { /* Simula ng container na may hawak sa avatar at mga palamuti. */
+    position: relative; /* Ginagawang basehan ng posisyon para sa mga naka-absolute na element. */
+    margin-bottom: 15px; /* Naglalagay ng 15px na espasyo sa ibaba. */
+} /* Sinasara ang CSS rule para sa .avatar-wrapper. */
+
+/* Binubuksan ang CSS rule para sa icon ng puso. */
+.hearts-icon { /* Simula ng style para sa maliit na pusong dekorasyon. */
+    position: absolute; /* Hinahayaan itong iposisyon nang eksakto sa loob ng .avatar-wrapper. */
+    top: -5px; /* Inilalagay nang bahagyang pataas mula sa itaas. */
+    left: -15px; /* Inilalagay nang bahagyang pakaliwa mula sa kaliwa. */
+    font-size: 22px; /* Itinatakda ang laki ng icon sa 22 pixels. */
+    color: #669db7; /* Binibigyan ng kulay asul ang icon ng puso. */
+} /* Sinasara ang CSS rule para sa .hearts-icon. */
+
+/* Binubuksan ang CSS rule para sa pangalan sa profile. */
+.profile-name { /* Simula ng style para sa heading ng pangalan. */
+    font-size: 22px; /* Itinatakda ang laki ng teksto sa 22 pixels. */
+    font-weight: bold; /* Ginagawang makapal o bold ang teksto. */
+    color: #1a3b50; /* Itinatakda ang kulay sa madilim na asul. */
+    margin: 10px 0 5px 0; /* Naglalagay ng 10px sa itaas, 0 sa kanan, 5px sa ibaba, at 0 sa kaliwa. */
+} /* Sinasara ang CSS rule para sa .profile-name. */
+
+/* Binubuksan ang CSS rule para sa subtitle sa ilalim ng pangalan. */
+.profile-subtitle { /* Simula ng style para sa maikling paglalarawan. */
+    font-size: 14px; /* Itinatakda ang laki ng teksto sa 14 pixels. */
+    color: #5c8499; /* Binibigyan ng muted blue na kulay. */
+    margin: 0 0 15px 0; /* Naglalagay ng 15px na espasyo sa ibaba. */
+} /* Sinasara ang CSS rule para sa .profile-subtitle. */
+
+/* Binubuksan ang CSS rule para sa divider na may bow. */
+.bow-divider { /* Simula ng flex row para sa pahalang na linya at bow. */
+    display: flex; /* Ginagawang flex container ang divider. */
+    align-items: center; /* Iginigitna ang linya at bow nang patayo. */
+    width: 80%; /* Itinatakda ang lapad sa 80% ng profile card. */
+    gap: 10px; /* Naglalagay ng 10px na pagitan sa pagitan ng mga item. */
+} /* Sinasara ang CSS rule para sa .bow-divider. */
+
+/* Binubuksan ang CSS rule para sa mga span sa divider maliban sa .tiny-bow. */
+.bow-divider span:not(.tiny-bow) { /* Tinatarget ang kaliwa at kanang linya ng divider. */
+    flex: 1; /* Pinapahaba ang linya para mapuno ang natitirang espasyo. */
+    height: 1px; /* Ginagawang 1px ang kapal ng linya. */
+    background-color: #d0e2ec; /* Binibigyan ng mapusyaw na asul na kulay ang linya. */
+} /* Sinasara ang CSS rule para sa mga linya ng divider. */
+
+/* Binubuksan ang CSS rule para sa maliit na bow sa gitna. */
+.tiny-bow { /* Simula ng style para sa gitnang bow icon. */
+    font-size: 14px; /* Itinatakda ang laki ng bow sa 14 pixels. */
+} /* Sinasara ang CSS rule para sa .tiny-bow. */
+
+/* Binubuksan ang CSS rule para sa lalagyan ng mga accordion. */
+.accordions-wrapper { /* Simula ng kanang kolum para sa mga accordion. */
+    flex: 2; /* Binibigyan ng 2 bahagi ng lapad kumpara sa profile card. */
+    display: flex; /* Ginagawang flex container ang wrapper. */
+    flex-direction: column; /* Pinagpapatong-patong nang patayo ang mga accordion. */
+    gap: 12px; /* Naglalagay ng 12px na espasyo sa pagitan ng bawat accordion. */
+} /* Sinasara ang CSS rule para sa .accordions-wrapper. */
+
+/* Binubuksan ang CSS rule para sa bawat accordion item. */
+.accordion-item { /* Simula ng style para sa isang kahon ng accordion. */
+    background-color: #edf5fa; /* Naglalagay ng malambot na asul na background. */
+    border-radius: 20px; /* Ginagawang bilugan ang mga sulok ng kahon. */
+    overflow: hidden; /* Itinatago ang anumang lumalampas sa bilugang sulok. */
+    border: 1px solid #d8e8f2; /* Naglalagay ng manipis na border sa paligid. */
+    transition: all 0.2s ease; /* Ginagawang smooth ang pagbabago ng mga style sa loob ng 0.2s. */
+} /* Sinasara ang CSS rule para sa .accordion-item. */
+
+/* Binubuksan ang CSS rule para sa header o pamagat ng accordion. */
+.accordion-header { /* Simula ng style para sa pipinduting bahagi ng accordion. */
+    padding: 12px 22px; /* Naglalagay ng 12px sa taas/ibaba at 22px sa kaliwa/kanan. */
+    font-weight: bold; /* Ginagawang bold ang pamagat. */
+    font-size: 16px; /* Itinatakda ang laki ng teksto sa 16 pixels. */
+    color: #1d455d; /* Itinatakda ang kulay sa malalim na asul. */
+    cursor: pointer; /* Ginagawang kamay ang cursor kapag itinapat dito. */
+    display: flex; /* Ginagawang flex container ang header. */
+    justify-content: space-between; /* Pinaghihiwalay ang pamagat sa kaliwa at arrow sa kanan. */
+    align-items: center; /* Iginigitna nang patayo ang pamagat at arrow. */
+    list-style: none; /* Tinatanggal ang default na list marker. */
+    user-select: none; /* Pinipigilan ang aksidenteng pag-highlight ng teksto kapag pinipindot. */
+} /* Sinasara ang CSS rule para sa .accordion-header. */
+
+/* Binubuksan ang rule para itago ang default disclosure marker ng browser. */
+.accordion-header::-webkit-details-marker { /* Tinatarget ang built-in arrow sa WebKit browsers. */
+    display: none; /* Itinatago ang default na arrow. */
+} /* Sinasara ang rule para sa ::-webkit-details-marker. */
+
+/* Binubuksan ang CSS rule para sa chevron o arrow icon. */
+.chevron { /* Simula ng style para sa maliit na arrow icon. */
+    font-size: 11px; /* Itinatakda ang laki ng arrow sa 11 pixels. */
+    color: #669db7; /* Binibigyan ng kulay asul ang arrow. */
+    transition: transform 0.2s ease; /* Ginagawang smooth ang pag-ikot ng arrow. */
+} /* Sinasara ang CSS rule para sa .chevron. */
+
+/* Binubuksan ang rule kapag nakabukas ang accordion item. */
+.accordion-item[open] .chevron { /* Tinatarget ang arrow kapag may "open" attribute ang accordion. */
+    transform: rotate(180deg); /* Iniikot nang 180 degrees ang arrow kapag nakabukas. */
+} /* Sinasara ang rule para sa nakabukas na chevron. */
+
+/* Binubuksan ang CSS rule para sa laman sa loob ng accordion. */
+.accordion-body { /* Simula ng style para sa body ng accordion. */
+    padding: 15px 22px 20px 22px; /* Naglalagay ng padding sa loob ng body. */
+    color: #3b5c6e; /* Itinatakda ang kulay ng teksto sa asul-abo. */
+    font-size: 14px; /* Itinatakda ang laki ng teksto sa 14 pixels. */
+    line-height: 1.6; /* Naglalagay ng komportableng agwat sa bawat linya ng teksto. */
+    border-top: 1px solid #e1eff6; /* Naglalagay ng manipis na linya sa pagitan ng header at body. */
+    background-color: #ffffff; /* Ginagawang puti ang background ng body. */
+} /* Sinasara ang CSS rule para sa .accordion-body. */
+
+/* Binubuksan ang CSS rule para sa bulleted list sa loob ng accordion body. */
+.accordion-body ul { /* Tinatarget ang mga <ul> sa loob ng .accordion-body. */
+    margin: 0; /* Tinatanggal ang default na outer margin ng listahan. */
+    padding-left: 20px; /* Naglalagay ng 20px na pasok sa kaliwa para sa mga bullet. */
+} /* Sinasara ang CSS rule para sa .accordion-body ul. */
+
+/* Binubuksan ang CSS rule para sa grupo ng mga tag. */
+.tags-group { /* Simula ng container para sa mga tag o badge. */
+    display: flex; /* Ginagawang flex container ang grupo ng tags. */
+    flex-wrap: wrap; /* Hinahayaang bumaba sa susunod na linya ang mga tag kung kulang ang espasyo. */
+    gap: 8px; /* Naglalagay ng 8px na pagitan sa bawat tag. */
+    margin-top: 8px; /* Naglalagay ng 8px na espasyo sa itaas ng grupo. */
+} /* Sinasara ang CSS rule para sa .tags-group. */
+
+/* Binubuksan ang CSS rule para sa bawat tag. */
+.tag { /* Simula ng style para sa iisang tag o pill badge. */
+    background-color: #e2f0f7; /* Naglalagay ng malambot na asul na background. */
+    color: #275670; /* Itinatakda ang kulay ng teksto sa madilim na asul. */
+    padding: 6px 14px; /* Naglalagay ng 6px sa taas/ibaba at 14px sa kaliwa/kanan. */
+    border-radius: 15px; /* Ginagawang bilugan o pill-shaped ang tag. */
+    font-size: 13px; /* Itinatakda ang laki ng teksto sa 13 pixels. */
+} /* Sinasara ang CSS rule para sa .tag. */
+
 .gallery-album {
     flex: 1; /* Sinasakop ang natitirang espasyo sa layout. */
     display: flex; /* Ginagawang flexible ang layout ng album. */
@@ -62,11 +225,10 @@
     width: 100%; /* Ginagawang 100% ang lapad ng album. */
     padding: 25px 10px; /* Nagbibigay ng espasyo sa loob ng album. */
     text-align: center; /* Inilalagay sa gitna ang mga teksto. */
-    background-color: #16587b; /* Nagbibigay ng mapusyaw na kulay blue sa background. */
 }
 
 .album-title {
-    color: #84b3ce; /* Ginagawang madilim na ube ang kulay ng pamagat. */
+    color: #84b3ce; /* Ginagawang madilim na blue ang kulay ng pamagat. */
     font-size: 34px; /* Itinatakda ang laki ng pamagat sa 34 pixels. */
     margin-bottom: 25px; /* Nagbibigay ng 25 pixels na espasyo sa ibaba ng pamagat. */
 }
