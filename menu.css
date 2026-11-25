@@ -322,211 +322,173 @@ body { /* Pipiliin ang body element ng pahina. */
 .accordion-body li:last-child {
     margin-bottom: 0; /* Tinatanggal ang extra space sa ilalim ng huling list item. */
 
+/* GALLERY */
 .gallery-album {
-    flex: 1; /* Sinasakop ang natitirang espasyo sa layout. */
-    display: flex; /* Ginagawang flexible ang layout ng album. */
-    flex-direction: column; /* Inaayos ang mga elemento nang patayo. */
-    align-items: center; /* Inilalagay sa gitna ang mga elemento nang pahalang. */
-    width: 100%; /* Ginagawang 100% ang lapad ng album. */
-    padding: 25px 10px; /* Nagbibigay ng espasyo sa loob ng album. */
-    text-align: center; /* Inilalagay sa gitna ang mga teksto. */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 25px 10px;
+    text-align: center;
+    background-color: #F7F0F7;
 }
 
 .album-title {
-    color: #84b3ce; /* Ginagawang madilim na blue ang kulay ng pamagat. */
-    font-size: 34px; /* Itinatakda ang laki ng pamagat sa 34 pixels. */
-    margin-bottom: 25px; /* Nagbibigay ng 25 pixels na espasyo sa ibaba ng pamagat. */
+    color: #84b3ce;
+    font-size: 34px;
+    margin-bottom: 25px;
 }
-
 /* CAROUSEL */
 .carousel {
-    width: 400px; /* Itinatakda ang lapad ng carousel sa 400 pixels. */
-    max-width: 90%; /* Nililimitahan ang lapad sa 90% ng magulang na elemento. */
-    margin: 0 auto; /* Inilalagay sa gitna ang carousel. */
+    width: 650px;
+    max-width: 95%;
+    margin: 0 auto;
 }
 
 .slides {
-    position: relative; /* Ginagawang batayan ng posisyon ng mga larawan. */
-    width: 100%; /* Ginagawang 100% ang lapad ng slides. */
-    height: 225px; /* Itinatakda ang taas ng slides sa 225 pixels. */
-    overflow: hidden; /* Itinatago ang mga bahaging lumalampas sa slides. */
-    background-color: black; /* Nagbibigay ng itim na background sa slides. */
-    border-radius: 8px; /* Binibilog ang mga sulok ng slides. */
+    position: relative;
+    width: 100%;
+    height: 365px;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 8px;
 }
 
 /* IMAGES */
 .slide {
-    position: absolute; /* Pinapayagan ang paglalagay ng slide sa tiyak na posisyon. */
-    inset: 0; /* Inilalagay ang slide sa lahat ng gilid ng slides container. */
-    width: 100%; /* Ginagawang 100% ang lapad ng slide. */
-    height: 100%; /* Ginagawang 100% ang taas ng slide. */
-    margin: 0; /* Tinatanggal ang default na margin ng slide. */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .slide img {
-    width: 100%; /* Ginagawang 100% ang lapad ng larawan. */
-    height: 100%; /* Ginagawang 100% ang taas ng larawan. */
-    object-fit: cover; /* Pinupuno ang lalagyan nang hindi nababago ang proporsyon ng larawan. */
-    display: block; /* Inaalis ang dagdag na espasyo sa ilalim ng larawan. */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .slide figcaption {
-    position: absolute; /* Inilalagay ang caption sa tiyak na posisyon sa larawan. */
-    left: 0; /* Inilalagay ang caption sa kaliwang gilid. */
-    right: 0; /* Inilalagay ang caption sa kanang gilid. */
-    bottom: 0; /* Inilalagay ang caption sa ibabang bahagi ng larawan. */
-    padding: 12px; /* Nagbibigay ng espasyo sa loob ng caption. */
-    background: rgba(0, 0, 0, 0.55); /* Nagbibigay ng bahagyang transparent na itim na background. */
-    color: white; /* Ginagawang puti ang teksto ng caption. */
-    text-align: center; /* Inilalagay sa gitna ang teksto ng caption. */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    text-align: center;
 }
 
 /* PREVIOUS AND NEXT BUTTONS */
 .nav {
-    position: absolute; /* Pinapayagan ang paglalagay ng button sa tiyak na posisyon. */
-    top: 50%; /* Inilalagay ang button sa gitnang bahagi ng slides. */
-    transform: translateY(-50%); /* Eksaktong isinasentro ang button nang patayo. */
-    z-index: 5; /* Inilalagay ang button sa ibabaw ng ibang elemento. */
-    border: none; /* Tinatanggal ang border ng button. */
-    background: rgba(0, 0, 0, 0.5); /* Nagbibigay ng bahagyang transparent na itim na background. */
-    color: white; /* Ginagawang puti ang kulay ng arrow. */
-    font-size: 22px; /* Itinatakda ang laki ng arrow sa 22 pixels. */
-    padding: 10px 14px; /* Nagbibigay ng espasyo sa loob ng button. */
-    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang button. */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 22px;
+    padding: 10px 14px;
+    cursor: pointer;
 }
 
 .nav:hover {
-    background: rgba(0, 0, 0, 0.8); /* Pinadidilim ang background kapag tinutukan ang button. */
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-    left: 8px; /* Inilalagay ang previous button 8 pixels mula sa kaliwa. */
+    left: 8px;
 }
 
 .next {
-    right: 8px; /* Inilalagay ang next button 8 pixels mula sa kanan. */
+    right: 8px;
 }
 
 /* DOTS */
 .dots {
-    text-align: center; /* Inilalagay sa gitna ang mga tuldok. */
-    padding: 12px 0; /* Nagbibigay ng 12 pixels na espasyo sa itaas at ibaba. */
+    text-align: center;
+    padding: 12px 0;
 }
 
 .dot {
-    width: 12px; /* Itinatakda ang lapad ng tuldok sa 12 pixels. */
-    height: 12px; /* Itinatakda ang taas ng tuldok sa 12 pixels. */
-    margin: 0 5px; /* Nagbibigay ng 5 pixels na pagitan sa bawat tuldok. */
-    padding: 0; /* Tinatanggal ang padding ng tuldok. */
-    border: none; /* Tinatanggal ang border ng tuldok. */
-    border-radius: 50%; /* Ginagawang bilog ang tuldok. */
-    background: #b8b8b8; /* Ginagawang kulay abo ang mga hindi aktibong tuldok. */
-    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang tuldok. */
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #b8b8b8;
+    cursor: pointer;
 }
 
 .dot.active {
-    background: #84b3ce; /* Ginagawang madilim na ube ang aktibong tuldok. */
-}
+    background: #84b3ce;
 /*para sa footer*/
-.footer-container {
-    max-width: 1100px; /* Itinatakda ang pinakamalaking lapad ng footer sa 1100 pixels. */
-    margin: auto; /* Sinisigurong naka-center o nasa gitna ang buong footer container sa screen. */
-    padding: 25px 20px; /* Nagdaragdag ng espasyo sa loob ng footer container sa itaas, ibaba, at mga tagiliran. */
-    display: flex; /* Ginagawang flexible container ang footer para madaling mapagtabi ang mga nilalaman nito. */
-    justify-content: space-between; /* Pinaghihiwalay at inilalagay sa magkabilang dulo ng container ang mga elemento sa loob nito. */
-    align-items: center; /* Pantay na inilalagay sa gitna patayo ang mga nilalaman ng footer. */
-    gap: 40px; /* Nagbibigay ng 40 pixels na espasyo sa pagitan ng mga elemento sa loob ng footer. */
+.footer {
+    background-color: #84b3ce;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Stay Connected */
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
 .footer-info {
-    max-width: 550px; /* Nililimitahan ang pinakamalaking lapad ng text block sa 550 pixels. */
+    max-width: 550px;
 }
 
 .footer-info h2,
 .footer-socials h2 {
-    color: #84b3ce; /* Binabago ang kulay ng mga pamagat sa kulay ube. */
-    font-size: 22px; /* Itinatakda ang laki ng font ng mga pamagat sa 22 pixels. */
-    margin-bottom: 15px; /* Nagdaragdag ng espasyo sa ilalim ng mga pamagat. */
+    color: #84b3ce;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .footer-info p {
-    color: #581845; /* Binabago ang kulay ng mga talata sa kulay ube. */
-    font-size: 15px; /* Itinatakda ang laki ng font ng mga talata sa 15 pixels. */
-    line-height: 1.6; /* Pinapalaki ang espasyo sa pagitan ng mga linya ng teksto para mas madaling basahin. */
+    color: #84bce;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-/* Social Media */
 .footer-socials {
-    text-align: center; /* Inilalagay sa gitna ang mga nakapaloob na teksto o elemento. */
+    text-align: center;
 }
 
 .social-links {
-    display: flex; /* Ginagawang flexible box ang mga social link para magkatabi-tabi sila. */
-    justify-content: center; /* Pinapupunta sa gitna ang mga social link. */
-    gap: 25px; /* Nagbibigay ng 25 pixels na espasyo sa pagitan ng bawat social link. */
-    margin-top: 15px; /* Nagdaragdag ng espasyo sa itaas ng mga social link. */
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
 }
 
 .social-links a {
-    color: #84b3ce; /* Itinatakda ang kulay ng mga social link sa matingkad na ube o pink. */
-    font-size: 25px; /* Itinatakda ang laki ng mga icon o teksto ng social link sa 25 pixels. */
-    font-weight: bold; /* Ginagawang makapal ang estilo ng font ng mga link. */
-    text-decoration: none; /* Tinatanggal ang guhit sa ilalim ng mga link. */
-    transition: 0.3s; /* Nagdaragdag ng 0.3 segundong bilis para sa maayos na pagbabago kapag tinutok ang mouse. */
+    color: #84b3ce;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
-    color: #16587b; /* Binabago ang kulay ng social link patusok sa mas madilim na ube kapag tinutukan. */
-    transform: scale(1.2); /* Pinalalaki nang bahagya ang social link (20%) kapag tinutukan ng mouse. */
+    color: #581845;
+    transform: scale(1.2);
 }
 
 .footer-bottom {
-    background-color: #16587b; /* Nilalagyan ng madilim na ube na kulay ang background ng pinakapabang bahagi. */
-    color: 84b3ce; /* Ginagawang kulay puti ang mga text sa pinakapabang bahagi para mabasa nang maayos. */
-    text-align: center; /* Inilalagay sa gitna ang teksto sa pinakapabang bahagi. */
-    padding: 14px; /* Nagdaragdag ng 14 pixels na espasyo sa paligid ng pinakapabang bahagi. */
-    font-size: 14px; /* Itinatakda ang laki ng font sa pinakapabang bahagi sa 14 pixels. */
-}
-
-@media screen and (max-width: 800px) {
-
-    .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Binabago ang grid sa dalawang hanay para sa mas maliit na screen. */
-        gap: 20px; /* Binabawasan ang espasyo sa pagitan ng mga elemento ng grid sa 20 pixels. */
-    }
-
-    .footer-container {
-        flex-direction: column; /* Pinagpatong-patong nang pababa ang mga elemento sa halip na magkatabi. */
-        text-align: center; /* Inilalagay sa gitna ang lahat ng teksto sa loob ng footer container. */
-        gap: 25px; /* Nagbibigay ng 25 pixels na espasyo sa pagitan ng mga nakasalansang elemento. */
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Ginagawang iisang hanay na lang ang portfolio grid para sa maliliit na telepono. */
-        gap: 15px; /* Binabawasan ang espasyo sa pagitan ng mga item sa 15 pixels. */
-    }
-
-    .content h1 {
-        font-size: 30px; /* Binabawasan ang laki ng pamagat sa 30 pixels para magkasya nang maayos. */
-    }
-
-    .project-link {
-        font-size: 16px; /* Itinatakda ang laki ng font ng project link sa 16 pixels. */
-    }
-
-    .nav-link {
-        padding: 16px 10px; /* Binabago ang padding sa paligid ng navigation link para mas madaling pindutin sa telepono. */
-        font-size: 14px; /* Binabawasan ang laki ng font ng nav link sa 14 pixels. */
-    }
-
-    .footer-info h2,
-    .footer-socials h2 {
-        font-size: 20px; /* Binabawasan ang laki ng mga pamagat sa 20 pixels. */
-    }
-
+    background-color:#16587b;
+    color: #84b3ce;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
 }
