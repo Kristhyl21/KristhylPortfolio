@@ -1,3 +1,17 @@
+* { /* Pipiliin nito ang lahat ng elemento sa buong pahina. */
+  box-sizing: border-box; /* Isinasama ang padding at border sa kabuuang lapad at taas ng elemento. */
+  margin: 0; /* Tinatanggal ang default na margin ng browser sa lahat ng elemento. */
+  padding: 0; /* Tinatanggal ang default na padding ng browser sa lahat ng elemento. */
+  font-family: Arial, sans-serif; /* Ginagawang Arial ang default na font ng buong pahina. */
+} /* Pagtatapos ng universal selector rules. */
+
+body { /* Pipiliin ang body element ng pahina. */
+  background-color: #f7f9f8; /* Nilalagyan ng napakaitim nang konti na puting kulay ang background. */
+  color: #333; /* Ginagawang madilim na abo ang kulay ng mga teksto. */
+  min-height: 100vh; /* Tinitiyak na lalagpas o kasingtaas ng buong screen ang pahina. */
+  display: flex; /* Ginagawang Flexbox container ang body. */
+  flex-direction: column; /* Inihanay ang nilalaman ng body nang patayo mula taas pababa. */
+} /* Pagtatapos ng body style. */
 /* nagbibigay kulay sa navigation bar background */
     .navbar { 
     background-color: #84b3ce; /* kulay ng gray navigation bar background  */
@@ -54,20 +68,6 @@
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
-* { /* Pipiliin nito ang lahat ng elemento sa buong pahina. */
-  box-sizing: border-box; /* Isinasama ang padding at border sa kabuuang lapad at taas ng elemento. */
-  margin: 0; /* Tinatanggal ang default na margin ng browser sa lahat ng elemento. */
-  padding: 0; /* Tinatanggal ang default na padding ng browser sa lahat ng elemento. */
-  font-family: Arial, sans-serif; /* Ginagawang Arial ang default na font ng buong pahina. */
-} /* Pagtatapos ng universal selector rules. */
-
-body { /* Pipiliin ang body element ng pahina. */
-  background-color: #f7f9f8; /* Nilalagyan ng napakaitim nang konti na puting kulay ang background. */
-  color: #333; /* Ginagawang madilim na abo ang kulay ng mga teksto. */
-  min-height: 100vh; /* Tinitiyak na lalagpas o kasingtaas ng buong screen ang pahina. */
-  display: flex; /* Ginagawang Flexbox container ang body. */
-  flex-direction: column; /* Inihanay ang nilalaman ng body nang patayo mula taas pababa. */
-} /* Pagtatapos ng body style. */
 /* Main Container */
 .main-container { /* Pipiliin ang pangunahing lalagyan ng nilalaman. */
   flex: 1; /* Pinalalawak ang main container para kainin ang natitirang taas ng screen. */
