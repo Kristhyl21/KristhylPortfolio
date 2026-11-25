@@ -323,172 +323,215 @@ body { /* Pipiliin ang body element ng pahina. */
     margin-bottom: 0; /* Tinatanggal ang extra space sa ilalim ng huling list item. */
 
 /* GALLERY */
+
+/* GALLERY ALBUM */
+
+/* Itinatakda ang gallery album bilang isang flex item na maaaring lumaki. */
 .gallery-album {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 25px 10px;
-    text-align: center;
-    background-color: #F7F0F7;
+    flex: 1; /* Pinapayagan ang album na gamitin ang natitirang espasyo sa parent container. */
+    display: flex; /* Ginagawang flex container ang gallery album. */
+    flex-direction: column; /* Inilalagay ang mga anak na element nang patayo. */
+    align-items: center; /* Ipinapagitna ang mga anak na element nang pahalang. */
+    width: 100%; /* Ginagawang buong lapad ng parent container ang album. */
+    padding: 25px 10px; /* Naglalagay ng 25px na espasyo sa taas at baba at 10px sa magkabilang gilid. */
+    text-align: center; /* Ipinapagitna ang text sa loob ng album. */
+    background-color: #F7F0F7; /* Itinatakda ang mapusyaw na kulay lila bilang background. */
 }
 
+/* Itinatakda ang itsura ng pamagat ng album. */
 .album-title {
-    color: #84b3ce;
-    font-size: 34px;
-    margin-bottom: 25px;
-}
-/* CAROUSEL */
-.carousel {
-    width: 650px;
-    max-width: 95%;
-    margin: 0 auto;
+    color: #84b3ce; /* Itinatakda ang kulay ng pamagat sa light blue. */
+    font-size: 34px; /* Itinatakda ang laki ng font ng pamagat sa 34px. */
+    margin-bottom: 25px; /* Naglalagay ng 25px na pagitan sa ilalim ng pamagat. */
 }
 
+/* CAROUSEL */
+
+/* Itinatakda ang lapad at posisyon ng carousel. */
+.carousel {
+    width: 650px; /* Itinatakda ang lapad ng carousel sa 650px. */
+    max-width: 95%; /* Tinitiyak na hindi lalampas sa 95% ng parent container ang lapad nito. */
+    margin: 0 auto; /* Ipinapagitna ang carousel at walang dagdag na margin sa taas at baba. */
+}
+
+/* Itinatakda ang container na naglalaman ng mga slide. */
 .slides {
-    position: relative;
-    width: 100%;
-    height: 365px;
-    overflow: hidden;
-    background-color: black;
-    border-radius: 8px;
+    position: relative; /* Ginagawang reference point para sa mga nakaposisyong anak na element. */
+    width: 100%; /* Ginagawang buong lapad ng carousel ang slides container. */
+    height: 365px; /* Itinatakda ang taas ng slides container sa 365px. */
+    overflow: hidden; /* Itinatago ang anumang content na lumalampas sa container. */
+    background-color: black; /* Ginagawang itim ang background ng slides container. */
+    border-radius: 8px; /* Ginagawang rounded ang mga sulok ng container. */
 }
 
 /* IMAGES */
+
+/* Itinatakda ang posisyon at sukat ng bawat slide. */
 .slide {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
+    position: absolute; /* Pinapayagan ang slide na ilagay sa eksaktong posisyon sa container. */
+    inset: 0; /* Inilalagay ang slide sa lahat ng gilid ng parent container. */
+    width: 100%; /* Ginagawang buong lapad ng container ang slide. */
+    height: 100%; /* Ginagawang buong taas ng container ang slide. */
+    margin: 0; /* Tinatanggal ang default na margin ng slide. */
 }
 
+/* Itinatakda ang sukat at display ng mga larawan sa slide. */
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100%; /* Ginagawang buong lapad ng slide ang larawan. */
+    height: 100%; /* Ginagawang buong taas ng slide ang larawan. */
+    object-fit: cover; /* Pinupuno ang slide ng larawan nang hindi nababago ang proportions nito. */
+    display: block; /* Inaalis ang dagdag na espasyo sa ilalim ng larawan. */
 }
 
+/* Itinatakda ang caption na nakapatong sa ibabang bahagi ng larawan. */
 .slide figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.55);
-    color: white;
-    text-align: center;
+    position: absolute; /* Pinapayagan ang caption na ilagay sa eksaktong posisyon sa slide. */
+    left: 0; /* Inilalagay ang caption sa kaliwang gilid ng slide. */
+    right: 0; /* Inilalagay ang caption sa kanang gilid ng slide. */
+    bottom: 0; /* Inilalagay ang caption sa pinakailalim ng slide. */
+    padding: 12px; /* Naglalagay ng 12px na espasyo sa paligid ng caption text. */
+    background: rgba(0, 0, 0, 0.55); /* Naglalagay ng semi-transparent na itim na background sa caption. */
+    color: white; /* Ginagawang puti ang caption text. */
+    text-align: center; /* Ipinapagitna ang caption text. */
 }
 
 /* PREVIOUS AND NEXT BUTTONS */
+
+/* Itinatakda ang pangkalahatang itsura at posisyon ng navigation buttons. */
 .nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    border: none;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 22px;
-    padding: 10px 14px;
-    cursor: pointer;
+    position: absolute; /* Pinapayagan ang button na ilagay sa eksaktong posisyon sa slide. */
+    top: 50%; /* Inilalagay ang button sa gitna ng taas ng slide. */
+    transform: translateY(-50%); /* Inaayos ang button upang eksaktong nasa gitna ito nang patayo. */
+    z-index: 5; /* Tinitiyak na nasa ibabaw ng ibang slide elements ang button. */
+    border: none; /* Tinatanggal ang default na border ng button. */
+    background: rgba(0, 0, 0, 0.5); /* Ginagawang semi-transparent na itim ang background ng button. */
+    color: white; /* Ginagawang puti ang arrow o text ng button. */
+    font-size: 22px; /* Itinatakda ang laki ng arrow o text sa 22px. */
+    padding: 10px 14px; /* Naglalagay ng 10px na espasyo sa taas at baba at 14px sa magkabilang gilid. */
+    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang button. */
 }
 
+/* Binabago ang background ng navigation button kapag tinutukan ito ng mouse. */
 .nav:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Ginagawang mas madilim ang background ng button kapag naka-hover. */
 }
 
+/* Inilalagay ang previous button sa kaliwang bahagi ng carousel. */
 .prev {
-    left: 8px;
+    left: 8px; /* Naglalagay ng 8px na pagitan mula sa kaliwang gilid. */
 }
 
+/* Inilalagay ang next button sa kanang bahagi ng carousel. */
 .next {
-    right: 8px;
+    right: 8px; /* Naglalagay ng 8px na pagitan mula sa kanang gilid. */
 }
 
 /* DOTS */
+
+/* Itinatakda ang posisyon at spacing ng mga navigation dots. */
 .dots {
-    text-align: center;
-    padding: 12px 0;
+    text-align: center; /* Ipinapagitna ang mga dots sa carousel. */
+    padding: 12px 0; /* Naglalagay ng 12px na espasyo sa taas at baba ng dots. */
 }
 
+/* Itinatakda ang itsura ng bawat navigation dot. */
 .dot {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background: #b8b8b8;
-    cursor: pointer;
+    width: 12px; /* Itinatakda ang lapad ng dot sa 12px. */
+    height: 12px; /* Itinatakda ang taas ng dot sa 12px. */
+    margin: 0 5px; /* Naglalagay ng 5px na pagitan sa kaliwa at kanan ng bawat dot. */
+    padding: 0; /* Tinatanggal ang default na padding ng dot. */
+    border: none; /* Tinatanggal ang border ng dot. */
+    border-radius: 50%; /* Ginagawang bilog ang dot. */
+    background: #b8b8b8; /* Itinatakda ang kulay ng hindi aktibong dot sa gray. */
+    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang dot. */
 }
 
+/* Itinatakda ang kulay ng dot na kumakatawan sa kasalukuyang slide. */
 .dot.active {
-    background: #84b3ce;
-/*para sa footer*/
+    background: #84b3ce; /* Ginagawang light blue ang aktibong dot. */
+}
+
+/* FOOTER */
+
+/* Itinatakda ang pangkalahatang itsura ng footer. */
 .footer {
-    background-color: #84b3ce;
-    width: 100%;
-    margin-top: auto;
+    background-color: #84b3ce; /* Itinatakda ang background ng footer sa light blue. */
+    width: 100%; /* Ginagawang buong lapad ng webpage ang footer. */
+    margin-top: auto; /* Itinutulak ang footer sa ibaba kapag may available na espasyo sa flex container. */
 }
 
+/* FOOTER CONTAINER */
+
+/* Inaayos ang mga bahagi ng footer sa isang row. */
 .footer-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 25px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    max-width: 1100px; /* Nililimitahan ang maximum na lapad ng footer content sa 1100px. */
+    margin: auto; /* Ipinapagitna ang footer container sa webpage. */
+    padding: 25px 20px; /* Naglalagay ng 25px na espasyo sa taas at baba at 20px sa magkabilang gilid. */
+    display: flex; /* Ginagawang flex container ang footer. */
+    justify-content: space-between; /* Inilalayo ang footer sections sa magkabilang dulo. */
+    align-items: center; /* Inaayos ang footer sections sa gitna nang patayo. */
+    gap: 40px; /* Naglalagay ng 40px na pagitan sa footer sections. */
 }
 
+/* FOOTER INFORMATION */
+
+/* Itinatakda ang maximum na lapad ng footer information. */
 .footer-info {
-    max-width: 550px;
+    max-width: 550px; /* Nililimitahan ang lapad ng information section sa 550px. */
 }
 
+/* Itinatakda ang disenyo ng footer headings. */
 .footer-info h2,
 .footer-socials h2 {
-    color: #84b3ce;
-    font-size: 22px;
-    margin-bottom: 15px;
+    color: #84b3ce; /* Itinatakda ang kulay ng footer headings sa light blue. */
+    font-size: 22px; /* Itinatakda ang laki ng footer headings sa 22px. */
+    margin-bottom: 15px; /* Naglalagay ng 15px na pagitan sa ilalim ng headings. */
 }
 
+/* Itinatakda ang disenyo ng footer paragraph. */
 .footer-info p {
-    color: #84bce;
-    font-size: 15px;
-    line-height: 1.6;
+    color: #84b3ce; /* Itinatakda ang kulay ng footer paragraph sa light blue. */
+    font-size: 15px; /* Itinatakda ang laki ng footer paragraph sa 15px. */
+    line-height: 1.6; /* Naglalagay ng sapat na pagitan sa bawat linya ng paragraph. */
 }
 
+/* SOCIAL MEDIA */
+
+/* Itinatakda ang alignment ng social media section. */
 .footer-socials {
-    text-align: center;
+    text-align: center; /* Ipinapagitna ang social media content. */
 }
 
+/* Inaayos ang social media links sa isang row. */
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
+    display: flex; /* Ginagawang flex container ang social links. */
+    justify-content: center; /* Ipinapagitna ang social media links. */
+    gap: 25px; /* Naglalagay ng 25px na pagitan sa bawat social link. */
+    margin-top: 15px; /* Naglalagay ng 15px na pagitan sa itaas ng social links. */
 }
 
+/* Itinatakda ang disenyo ng social media links. */
 .social-links a {
-    color: #84b3ce;
-    font-size: 25px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
+    color: #84b3ce; /* Itinatakda ang kulay ng social links sa light blue. */
+    font-size: 25px; /* Itinatakda ang laki ng social links sa 25px. */
+    font-weight: bold; /* Ginagawang bold ang social links. */
+    text-decoration: none; /* Tinatanggal ang underline ng social links. */
+    transition: 0.3s; /* Ginagawang smooth ang pagbabago ng style sa loob ng 0.3 segundo. */
 }
 
+/* Binabago ang itsura ng social links kapag tinutukan ng mouse. */
 .social-links a:hover {
-    color: #581845;
-    transform: scale(1.2);
+    color: #581845; /* Binabago ang kulay ng link sa dark purple kapag naka-hover. */
+    transform: scale(1.2); /* Pinapalaki ang link nang 20% kapag naka-hover. */
 }
 
+/* FOOTER BOTTOM */
+
+/* Itinatakda ang itsura ng copyright section sa pinakailalim ng footer. */
 .footer-bottom {
-    background-color:#16587b;
-    color: #84b3ce;
-    text-align: center;
-    padding: 14px;
-    font-size: 14px;
+    background-color: #16587b; /* Itinatakda ang background ng copyright section sa dark blue. */
+    color: #84b3ce; /* Itinatakda ang kulay ng copyright text sa light blue. */
+    text-align: center; /* Ipinapagitna ang copyright text. */
+    padding: 14px; /* Naglalagay ng 14px na espasyo sa paligid ng copyright text. */
+    font-size: 14px; /* Itinatakda ang laki ng copyright text sa 14px. */
 }
