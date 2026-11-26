@@ -186,12 +186,6 @@ body { /* Pipiliin ang body element ng pahina. */
   color: #6c757d;
   font-size: 0.88rem;
 }
-
-/* Responsive adjustments for mobile/smaller screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
   
   .profile-card, .nav-menu {
     width: 100%;
