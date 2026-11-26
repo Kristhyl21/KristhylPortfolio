@@ -68,7 +68,6 @@ body { /* Pipiliin ang body element ng pahina. */
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
-/* Main Container */
 /* Main Container Layout */
 .container {
   display: flex;
