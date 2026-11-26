@@ -69,111 +69,133 @@ body { /* Pipiliin ang body element ng pahina. */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
 /* Main Container */
-.main-container { /* Pipiliin ang pangunahing lalagyan ng nilalaman. */
-  flex: 1; /* Pinalalawak ang main container para kainin ang natitirang taas ng screen. */
-  display: flex; /* Ginagawang Flexbox container ang main area. */
-  flex-direction: column; /* Inihanay ang mga nilalaman sa loob nang patayo. */
-  align-items: center; /* Gitnang-gitna ang mga elemento sa pahalang na oryentasyon. */
-  padding: 40px 20px; /* Naglalagay ng espasyo sa loob: 40px taas/baba at 20px kaliwa/kanan. */
-  max-width: 1000px; /* Nililimitahan sa 1000px ang maximum na lapad ng buong nilalaman. */
-  margin: 0 auto; /* Gitnang-gitna ang mismong main container sa screen. */
-  width: 100%; /* Sinasakop ang buong lapad hanggang sa maabot ang max-width. */
-} /* Pagtatapos ng main-container style. */
+/* Main Container Layout */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  max-width: 1050px;
+  width: 100%;
+  align-items: center;
+}
 
-/* Header Section */
-.header-section { /* Pipiliin ang lalagyan ng pangalan at section title. */
-  text-align: center; /* Inihanay sa gitna ang lahat ng teksto sa header. */
-  margin-bottom: 30px; /* Naglalagay ng 30px na espasyo sa ibaba bago ang card. */
-} /* Pagtatapos ng header-section style. */
+/* Left Profile Card */
+.profile-card {
+  background-color: #0b3c5d; /* Dark teal blue from the updated image */
+  color: #ffffff;
+  padding: 40px 35px;
+  border-radius: 20px;
+  flex: 1.2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
 
-.student-name { /* Pipiliin ang pangunahing pamagat ng pangalan. */
-  font-size: 32px; /* Nilalagyan ng laking 32px ang pangalan. */
-  font-family: "Georgia", serif; /* Ginagawang Georgia ang uri ng font nito. */
-  color: #000; /* Ginagawang itim ang kulay ng pangalan. */
-  margin-bottom: 10px; /* Naglalagay ng 10px na patlang sa ibaba ng pangalan. */
-} /* Pagtatapos ng student-name style. */
+/* Profile Image Circle - Centered */
+.avatar-container {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
 
-.section-code { /* Pipiliin ang sub-title para sa strand/section. */
-  font-size: 20px; /* Nilalagyan ng laking 20px ang text ng section. */
-  font-family: "Georgia", serif; /* Ginagawang Georgia ang uri ng font nito. */
-  color: #000; /* Ginagawang itim ang kulay ng section code. */
-} /* Pagtatapos ng section-code style. */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38b6ff; /* Highlight circle border */
+}
 
-/* Central Card (Welcome Box) */
-.welcome-card { /* Pipiliin ang mismong blue lalagyan sa gitna. */
-  background-color: #16587b; /* Nilalagyan ng napakaputlang blue na kulay ang loob ng card. */
-  border: 2px solid #84b3ce; /* Nilalagyan ng dark blue na guhit na may kapal na 2px sa paligid. */
-  border-radius: 12px; /* Ginagawang bilugan ang apat na sulok ng card. */
-  padding: 30px 35px; /* Naglalagay ng espasyo sa loob ng card: 30px taas/baba at 35px kaliwa/kanan. */
-  width: 100%; /* Kinukuha ang buong lapad ng magulang na container. */
-  max-width: 800px; /* Nililimitahan ang lapad ng card sa 800px lamang. */
-  margin-bottom: 50px; /* Naglalagay ng 50px na patlang sa ibaba bago ang social section. */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Naglalagay ng napakagandang banayad na anino sa ilalim ng card. */
-} /* Pagtatapos ng welcome-card style. */
+.greeting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+}
 
-.card-title { /* Pipiliin ang pamagat sa loob ng card. */
-  color: #84b3ce; /* Nilalagyan ng dark blue na kulay ang teksto ng pamagat. */
-  font-size: 24px; /* Nilalagyan ng laking 24px ang pamagat ng card. */
-  margin-bottom: 15px; /* Naglalagay ng 15px na espasyo sa ibaba nito. */
-} /* Pagtatapos ng card-title style. */
+.name {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
 
-.card-text { /* Pipiliin ang mga parapo sa loob ng card. */
-  color: #84b3ce; /* Nilalagyan ng maitim na kulay-dark blue ang teksto. */
-  font-size: 15px; /* Nilalagyan ng sukat na 15px ang mga pangungusap. */
-  line-height: 1.6; /* Naglalagay ng magandang patlang sa pagitan ng mga linya ng teksto. */
-  margin-bottom: 20px; /* Naglalagay ng 20px na espasyo sa ibaba ng bawat parapo. */
-} /* Pagtatapos ng card-text style. */
+/* Student Badge */
+.badge-container {
+  margin-bottom: 25px;
+}
 
-.sub-heading { /* Pipiliin ang lalagyan ng maliit na orange bar at sub-title. */
-  display: flex; /* Ginagawang Flexbox container para maise-side-by-side ang orange bar at text. */
-  align-items: center; /* Inihanay sa gitna patayo ang orange bar at ang heading text. */
-  gap: 8px; /* Naglalagay ng 8px na espasyo sa pagitan ng bar at ng teksto. */
-  margin-top: 15px; /* Naglalagay ng 15px na patlang sa itaas nito. */
-  margin-bottom: 12px; /* Naglalagay ng 12px na patlang sa ibaba nito. */
-} /* Pagtatapos ng sub-heading style. */
+.badge {
+  background-color: #178a9c;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+}
 
-.sub-heading h3 { /* Pipiliin ang h3 tag sa loob ng sub-heading. */
-  color: #84b3ce; /* Nilalagyan ng dark blue na kulay ang pangalawang pamagat. */
-  font-size: 18px; /* Nilalagyan ng laking 18px ang pangalawang pamagat. */
-} /* Pagtatapos ng sub-heading h3 style. */
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1d8e0;
+}
 
-/* Stay Connected & Socials Flexbox Layout */
-.connect-section { /* Pipiliin ang section ng Stay Connected at Socials. */
-  display: flex; /* Ginagawang Flexbox para maitabi ang dalawang seksyon. */
-  justify-content: space-between; /* Ihinihiwalay ang magkabilang seksyon sa pinakadulo ng kaliwa't kanan. */
-  width: 100%; /* Kinukuha ang buong lapad ng container. */
-  max-width: 850px; /* Nililimitahan ang kabuuang lapad sa 850px. */
-  margin-bottom: 30px; /* Naglalagay ng 30px na espasyo sa ibaba bago ang footer. */
-  gap: 40px; /* Naglalagay ng minimum na 40px na patlang sa pagitan ng dalawang grupo. */
-} /* Pagtatapos ng connect-section style. */
+/* Right Side Navigation Cards */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
 
-.connect-left { /* Pipiliin ang kaliwang lalagyan ng mensahe. */
-  flex: 1; /* Pinapayagang lumawak ang kaliwang bahagi para sakupin ang natitirang kwadra. */
-} /* Pagtatapos ng connect-left style. */
+.nav-card {
+  background-color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: stretch;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-.connect-left h3 { /* Pipiliin ang pamagat na "Stay Connected!". */
-  color: #6a9bb3; /* Nilalagyan ng pastel blue na kulay ang pamagat. */
-  font-size: 20px; /* Nilalagyan ng laking 20px ang font size nito. */
-  margin-bottom: 12px; /* Naglalagay ng 12px na espasyo sa ibaba bago ang parapo. */
-} /* Pagtatapos ng connect-left h3 style. */
+.nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
 
-.connect-left p { /* Pipiliin ang parapo ng pasasalamat sa kaliwa. */
-  color: #84b3ce; /* Nilalagyan ng medyo pulang maroon na kulay ang teksto. */
-  font-size: 14px; /* Nilalagyan ng sukat na 14px ang font nito. */
-  line-height: 1.5; /* Naglalagay ng patlang sa pagitan ng mga linya ng teksto. */
-} /* Pagtatapos ng connect-left p style. */
+/* Left colored bar on cards */
+.nav-indicator {
+  width: 6px;
+  background-color: #178a9c;
+  flex-shrink: 0;
+}
 
-.connect-right { /* Pipiliin ang kanang lalagyan ng mga social icon. */
-  display: flex; /* Ginagawang Flexbox container ang kanang bahagi. */
-  flex-direction: column; /* Inihanay patayo ang pamagat at ang mga icon. */
-  align-items: flex-end; /* Inihanay sa pinakakanang gilid ang lahat ng elemento rito. */
-} /* Pagtatapos ng connect-right style. */
+.nav-content {
+  padding: 18px 22px;
+}
 
-.connect-right h3 { /* Pipiliin ang pamagat na "My Socials". */
-  color: #84b3ce; /* Nilalagyan ng pastel blue na kulay ang pamagat. */
-  font-size: 20px; /* Nilalagyan ng laking 20px ang pamagat nito. */
-  margin-bottom: 12px; /* Naglalagay ng 12px na espasyo sa ibaba bago ang mga icon. */
-} 
+.nav-content h3 {
+  color: #178a9c;
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.nav-content p {
+  color: #6c757d;
+  font-size: 0.88rem;
+}
+
+/* Responsive adjustments for mobile/smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .profile-card, .nav-menu {
+    width: 100%;
+  }
 /* PAGE TITLE */
 .page-heading {
     text-align: center; /* Ipinapagitna ang mga heading. */
