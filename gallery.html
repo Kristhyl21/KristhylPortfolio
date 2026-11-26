@@ -1,117 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Photos</title>
-
-    <link rel="stylesheet" href="menu.css">
-</head>
-
-<body>
-
-    <!-- NAVIGATION BAR -->
+    <link rel = "stylesheet" href = menu.css>
     <nav class="navbar" role="navigation" aria-label="Main Navigation">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </nav>
+ <ul class="nav-list">
+ <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+ <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+ <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+ <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+ <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+ </ul>
+</nav>
+<center>
+     <div class="content">
+        <h1>Gallery</h1>
+        <p>PICTURES AND MEMORIES</p>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-container">
+ <section class="gallery-album">
 
-        <!-- PAGE HEADING -->
-        <div class="content">
-            <h1>Gallery</h1>
-            <p>PICTURES AND MEMORIES</p>
-        </div>
+        <h1 class="album-title">My Gallery</h1>
 
-        <!-- GALLERY ALBUM -->
-        <section class="gallery-album">
+        <div class="carousel" id="carousel">
 
-            <h2 class="album-title">My Gallery</h2>
+            <div class="slides">
 
-            <div class="carousel" id="carousel">
+                <figure class="slide">
+                    <img src="futureme.png" width= "500" height="500" alt="Future Me">
+                    <figcaption>Future Me</figcaption>
+                </figure>
 
-                <!-- IMAGE SLIDES -->
-                <div class="slides">
+                <figure class="slide">
+                    <img src="family.png" width= "500" height="500" alt="My Family">
+                    <figcaption>My Family</figcaption>
+                </figure>
 
-                    <figure class="slide">
-                        <img src="futureme.png"
-                             alt="Future Me">
-                        <figcaption>Future Me</figcaption>
-                    </figure>
+                <figure class="slide">
+                    <img src="MYfriends.png" width= "1000" height="500" alt="My Friend">
+                    <figcaption>My Friend</figcaption>
+                </figure>
 
-                    <figure class="slide">
-                        <img src="family.png"
-                             alt="My Family">
-                        <figcaption>My Family</figcaption>
-                    </figure>
+                <figure class="slide">
+                    <img src="schoolgirlyme.png" width= "1000" height="500" alt="School">
+                    <figcaption>School Girly Me</figcaption>
+                </figure>
 
-                    <figure class="slide">
-                        <img src="MYfriends.png"
-                             alt="My Friends">
-                        <figcaption>My Friends</figcaption>
-                    </figure>
-
-                    <figure class="slide">
-                        <img src="schoolgirlyme.png"
-                             alt="School Girly Me">
-                        <figcaption>School Girly Me</figcaption>
-                    </figure>
-
-                </div>
-
-                <!-- NAVIGATION BUTTONS -->
-                <button class="nav prev"
-                        type="button"
-                        aria-label="Previous image">
+                <button class="nav prev" type="button">
                     &#10094;
                 </button>
 
-                <button class="nav next"
-                        type="button"
-                        aria-label="Next image">
+                <button class="nav next" type="button">
                     &#10095;
                 </button>
 
             </div>
 
-            <!-- SLIDE INDICATORS -->
             <div class="dots"></div>
 
-        </section>
+        </div>
 
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
+    </section>
+</center>
+     <footer class="footer">
 
         <div class="footer-container">
 
             <div class="footer-info">
                 <h2>Stay Connected!</h2>
-
                 <p>
                     Thank you for visiting my portfolio.
-                    Connect and contact with me through my
-                    social media accounts. Your support and
-                    feedback are appreciated!
+                    connect and contact with me through my social media accounts.
+                    Your support and feedback are appreciated!
                 </p>
             </div>
 
@@ -119,36 +81,24 @@
                 <h2>My Socials</h2>
 
                 <div class="social-links">
-                    <a href="https://www.facebook.com/ellah.phot"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Facebook">
-                        f
-                    </a>
-
-                    <a href="https://www.instagram.com/itsme_ellaphot"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram">
-                        Instagram
-                    </a>
+                    <a href="https://www.facebook.com/ellah.phot" target="_blank">f</a>
+                    <a href="https://www.instagram.com/itsme_ellaphot?rpxt=anprbGVkYXdiY2pr" target="_blank">▶</a>
                 </div>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 BANANA Corporation.</p>
+            <p>©2026 BANANA Corporation.</p>
         </div>
 
     </footer>
 
-    <!-- CAROUSEL JAVASCRIPT -->
-    <script>
-        const carousel = document.getElementById("carousel");
+     <script>
 
+        const carousel = document.getElementById("carousel");
         const slides = carousel.querySelectorAll(".slide");
-        const dotsBox = document.querySelector(".dots");
+        const dotsBox = carousel.querySelector(".dots");
 
         const nextButton = carousel.querySelector(".next");
         const prevButton = carousel.querySelector(".prev");
@@ -158,17 +108,13 @@
 
         const total = slides.length;
 
-        // CREATE THE DOTS
+        // CREATE DOTS
         slides.forEach((slide, index) => {
 
             const dot = document.createElement("button");
 
             dot.type = "button";
             dot.className = "dot";
-            dot.setAttribute(
-                "aria-label",
-                "Show image " + (index + 1)
-            );
 
             dot.addEventListener("click", () => {
                 showSlide(index);
@@ -181,38 +127,28 @@
 
         const dots = dotsBox.querySelectorAll(".dot");
 
-        // DISPLAY THE SELECTED SLIDE
+        // SHOW SLIDE
         function showSlide(index) {
 
             current = (index + total) % total;
 
             slides.forEach((slide, i) => {
-                slide.classList.toggle(
-                    "active",
-                    i === current
-                );
+                slide.style.display =
+                    i === current ? "block" : "none";
             });
 
             dots.forEach((dot, i) => {
-                dot.classList.toggle(
-                    "active",
-                    i === current
-                );
-
-                dot.setAttribute(
-                    "aria-current",
-                    i === current ? "true" : "false"
-                );
+                dot.classList.toggle("active", i === current);
             });
 
         }
 
-        // NEXT IMAGE
+        // NEXT SLIDE
         function nextSlide() {
             showSlide(current + 1);
         }
 
-        // PREVIOUS IMAGE
+        // PREVIOUS SLIDE
         function prevSlide() {
             showSlide(current - 1);
         }
@@ -231,7 +167,6 @@
         // AUTOMATIC SLIDESHOW
         function startAutoplay() {
             clearInterval(timer);
-
             timer = setInterval(nextSlide, 4000);
         }
 
@@ -244,11 +179,11 @@
             startAutoplay();
         }
 
-        // PAUSE WHEN MOUSE IS OVER THE GALLERY
+        // PAUSE WHEN HOVERING
         carousel.addEventListener("mouseenter", stopAutoplay);
         carousel.addEventListener("mouseleave", startAutoplay);
 
-        // DISPLAY THE FIRST IMAGE
+        // FIRST IMAGE
         showSlide(0);
         startAutoplay();
 
