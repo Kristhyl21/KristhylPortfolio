@@ -1,73 +1,57 @@
-* { /* Pipiliin nito ang lahat ng elemento sa buong pahina. */
-  box-sizing: border-box; /* Isinasama ang padding at border sa kabuuang lapad at taas ng elemento. */
-  margin: 0; /* Tinatanggal ang default na margin ng browser sa lahat ng elemento. */
-  padding: 0; /* Tinatanggal ang default na padding ng browser sa lahat ng elemento. */
-  font-family: Arial, sans-serif; /* Ginagawang Arial ang default na font ng buong pahina. */
-} /* Pagtatapos ng universal selector rules. */
-
-body { /* Pipiliin ang body element ng pahina. */
-  background-color: #f7f9f8; /* Nilalagyan ng napakaitim nang konti na puting kulay ang background. */
-  color: #333; /* Ginagawang madilim na abo ang kulay ng mga teksto. */
-  min-height: 100vh; /* Tinitiyak na lalagpas o kasingtaas ng buong screen ang pahina. */
-  display: flex; /* Ginagawang Flexbox container ang body. */
-  flex-direction: column; /* Inihanay ang nilalaman ng body nang patayo mula taas pababa. */
-} /* Pagtatapos ng body style. */
-/* nagbibigay kulay sa navigation bar background */
-    .navbar { 
-    background-color: #84b3ce; /* kulay ng gray navigation bar background  */
-    width: 100%;  /* lapad ng navigation bar */
-} 
-    /* nagbibigay estilo sa navigation links */
-    .nav-link {  
-    display: block;    /* nagpapakita ng link bilang block element */           
-    padding: 14px 20px;      /* padding sa loob ng link */ 
-    color: #16587b;          /* kulay ng text ng link */
-    text-decoration: none;        /* tinatanggal ang underline sa link */
-    font-family: 'Segoe UI', sans-serif; /* font family ng link */
-    font-size: 15px; /* laki ng font ng link */
-    font-weight: 600; /* bigat ng font ng link */
-}
-/* nagbibigay estilo sa navigation links kapag hover */
-    .nav-link:hover { 
-    background-color: #16587b;   /* kulay ng background kapag hover */
-    color: #84b3ce;               /* kulay ng text kapag hover */
+/* UNIVERSAL SELECTOR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* nagbibigay estilo sa navigation links kapag active */
-.nav-link:link { 
-    color: #16587b; /* kulay ng text ng link kapag active */
-}
-/* nagbibigay estilo sa navigation links kapag nandoon ang user */
-.nav-link:visited { 
-    color: #16587b; /* kulay ng text ng link kapag nandoon ang user */
-} 
-/* nagbibigay estilo sa navigation links kapag hover */
-.nav-link:hover { 
-    background-color: #16587b; /* kulay ng background kapag hover */
-    color: #84b3ce; /* kulay ng text kapag hover */
-} 
-/* nagbibigay estilo sa navigation links kapag active */
-.nav-link.active { 
-    background-color: #FFFFFF;    /* Ginagawang kulay puti ang background */
-    color: #111827;               /* Pinasadiyang dark/itim ang kulay ng text para mabasa sa puting background */
-    border-bottom: 4px solid #FFFFFF; /* Kulay puti rin ang border sa ibaba */
+/* BODY STYLE */
+body {
+    background-color: #f7f9f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* nagbibigay estilo sa navigation links kapag active at nandoon ang user */
-.nav-link.active { 
-    background-color: white; /* kulay ng background kapag active at nandoon ang user */
-    border-bottom: 4px solid #38BDF8; /* nagbibigay ng border sa ilalim ng link kapag active at nandoon ang user */
-}  
-/* nagbibigay estilo sa navigation list */
+/* NAVIGATION BAR */
+.navbar { 
+    background-color: #84b3ce;
+    width: 100%;
+}
+
 .nav-list { 
-    display: flex;       /* nagpapakita ng list bilang flex container */       
-    flex-direction: row;       /* nagpapakita ng list items sa isang hilera */
-    justify-content: flex-start;  /* inilalagay ang list items sa simula ng container */
-    align-items: center;            /* inilalagay ang list items sa gitna ng container */
-    list-style-type: none;        /* tinatanggal ang default na bullet points ng list */
-    margin: 0;                   /* tinatanggal ang default na margin ng list */
-    padding: 0;                   /* tinatanggal ang default na padding ng list */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+
+.nav-link {  
+    display: block;
+    padding: 14px 20px;
+    color: #16587b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-link:hover { 
+    background-color: #16587b;
+    color: #84b3ce;
+}
+
+.nav-link.active { 
+    background-color: #ffffff;
+    color: #111827;
+    border-bottom: 4px solid #38BDF8;
+}
+
+/* BENTO GRID LAYOUT (HOMEPAGE) */
 .bento-container {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -75,10 +59,10 @@ body { /* Pipiliin ang body element ng pahina. */
     gap: 20px;
     max-width: 950px;
     width: 100%;
-    margin-top: 50px au;o:
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Base Bento Card Style */
 .bento-card {
     background-color: #ffffff;
     border-radius: 20px;
@@ -106,6 +90,8 @@ body { /* Pipiliin ang body element ng pahina. */
 
 .avatar-wrapper {
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
 }
 
 .avatar {
@@ -140,19 +126,18 @@ body { /* Pipiliin ang body element ng pahina. */
     color: #d0e4ee;
 }
 
-/* Hover effect for clickable navigation cards */
-.nav-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-}
-
+/* Navigation Cards */
 .nav-card {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-/* Icon Styles */
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
 .card-icon {
     font-size: 1.6rem;
     background-color: #e6f4f4;
@@ -178,7 +163,6 @@ body { /* Pipiliin ang body element ng pahina. */
     color: #666;
 }
 
-/* Photo Gallery Card (Styled with dark Teal accent) */
 .gallery-card {
     background: linear-gradient(135deg, #167e78, #0e5450);
     color: #ffffff;
@@ -189,7 +173,344 @@ body { /* Pipiliin ang body element ng pahina. */
     color: #ffffff;
 }
 
-/* Responsive for Mobile Devices */
+/* PAGE TITLE (ABOUT / GALLERY) */
+.page-heading {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.page-heading h1 {
+    font-size: 36px;
+    color: #174b8c;
+    margin-bottom: 5px;
+}
+
+.page-heading h2 {
+    font-size: 22px;
+    color: #174b8c;
+}
+
+/* ABOUT PAGE LAYOUT */
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 20px auto 35px;
+}
+
+.profile-card {
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #81bfff;
+}
+
+.profile-name {
+    font-size: 30px;
+    color: #174b8c;
+    margin-bottom: 12px;
+}
+
+.profile-subtitle {
+    font-size: 20px;
+    color: #173b70;
+}
+
+.accordions-wrapper {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.accordion-item {
+    width: 100%;
+    border: 1px solid #8dc3ff;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 18px;
+    background-color: #e0efff;
+    color: #174b8c;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+.chevron {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 9px solid #174b8c;
+    transition: transform 0.3s;
+}
+
+.accordion-item[open] .chevron {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 15px 25px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.accordion-body ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.accordion-body li {
+    padding-left: 5px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.accordion-body li:last-child {
+    margin-bottom: 0;
+}
+
+/* GALLERY PAGE & CAROUSEL */
+.content {
+    width: 100%;
+    text-align: center;
+    padding: 20px 15px 10px;
+}
+
+.content h1 {
+    color: #174b8c;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.content p {
+    color: #16587b;
+    font-size: 14px;
+    margin: 0;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px 30px;
+}
+
+.gallery-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 10px 30px;
+    text-align: center;
+    background-color: #f7f9f8;
+}
+
+.album-title {
+    color: #174b8c;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #e0efff;
+    border-radius: 8px;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    border: none;
+    border-radius: 50%;
+    background: rgba(22, 88, 123, 0.8);
+    color: white;
+    font-size: 22px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.nav:hover {
+    background: #174b8c;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border: none;
+    border-radius: 50%;
+    background: #b8cbd8;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #16587b;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    margin-top: auto;
+    background-color: #e0efff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.footer-info h2,
+.footer-socials h2 {
+    color: #174b8c;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.footer-info p {
+    color: #16587b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #16587b;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #174b8c;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    width: 100%;
+    background-color: #16587b;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {
     .bento-container {
         grid-template-columns: 1fr;
@@ -200,380 +521,17 @@ body { /* Pipiliin ang body element ng pahina. */
         grid-column: 1;
         grid-row: auto;
     }
-/* PAGE TITLE */
-.page-heading {
-    text-align: center; /* Ipinapagitna ang mga heading. */
-    padding: 10px 0; /* Naglalagay ng vertical space sa heading section. */
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .profile-card {
+        flex: 1 1 100%;
+    }
 }
-
-.page-heading h1 {
-    font-size: 36px; /* Itinatakda ang laki ng pangunahing title. */
-    color: #174b8c; /* Itinatakda ang kulay ng pangunahing title. */
-    margin-bottom: 5px; /* Naglalagay ng pagitan sa ilalim ng h1. */
-}
-
-.page-heading h2 {
-    font-size: 22px; /* Itinatakda ang laki ng pangalawang title. */
-    color: #174b8c; /* Itinatakda ang kulay ng pangalawang title. */
-}
-
-/* MAIN CONTENT LAYOUT */
-.about-container {
-    display: flex; /* Inilalagay ang profile at accordions sa iisang row. */
-    flex-direction: row; /* Inilalagay ang profile sa kaliwa at accordions sa kanan. */
-    align-items: center; /* Inaayos ang profile at accordions sa gitna nang patayo. */
-    gap: 30px; /* Naglalagay ng pagitan sa profile at accordions. */
-
-    width: 95%; /* Ginagawang 95% ng lapad ng screen ang container. */
-    max-width: 1400px; /* Nililimitahan ang maximum na lapad ng container. */
-    margin: 20px auto 35px; /* Naglalagay ng top at bottom margin at ipinapagitna ang container. */
-}
-
-/* LEFT SIDE: PROFILE */
-.profile-card {
-    flex: 0 0 30%; /* Inilalaan ang 30% ng lapad para sa profile. */
-    text-align: center; /* Ipinapagitna ang text sa profile. */
-    padding: 20px; /* Naglalagay ng espasyo sa loob ng profile card. */
-}
-
-.avatar-wrapper {
-    display: flex; /* Ginagawang flex container ang image wrapper. */
-    justify-content: center; /* Ipinapagitna ang profile picture nang pahalang. */
-    margin-bottom: 25px; /* Naglalagay ng pagitan sa ilalim ng profile picture. */
-}
-
-.profile-img {
-    width: 230px; /* Itinatakda ang lapad ng profile picture. */
-    height: 230px; /* Itinatakda ang taas ng profile picture. */
-    object-fit: cover; /* Pinupuno ang image area nang hindi nababago ang proportions. */
-    border-radius: 50%; /* Ginagawang bilog ang profile picture. */
-    border: 4px solid #81bfff; /* Naglalagay ng blue border sa profile picture. */
-}
-
-.profile-name {
-    font-size: 30px; /* Itinatakda ang laki ng pangalan. */
-    color: #174b8c; /* Itinatakda ang kulay ng pangalan. */
-    margin-bottom: 12px; /* Naglalagay ng pagitan sa ilalim ng pangalan. */
-}
-
-.profile-subtitle {
-    font-size: 20px; /* Itinatakda ang laki ng strand at section text. */
-    color: #173b70; /* Itinatakda ang kulay ng subtitle. */
-}
-
-/* RIGHT SIDE: ACCORDIONS */
-.accordions-wrapper {
-    flex: 1; /* Ginagamit ng accordions ang natitirang lapad. */
-    min-width: 0; /* Pinapayagan ang accordion container na lumiit kung kailangan. */
-
-    display: flex; /* Ginagawang flex container ang accordions. */
-    flex-direction: column; /* Inilalagay ang accordions nang patayo. */
-    gap: 15px; /* Naglalagay ng pagitan sa bawat accordion. */
-}
-
-/* ACCORDION BOX */
-.accordion-item {
-    width: 100%; /* Ginagawang kasinglapad ng wrapper ang accordion. */
-    border: 1px solid #8dc3ff; /* Naglalagay ng manipis na blue border. */
-    border-radius: 16px; /* Ginagawang rounded ang mga sulok. */
-    overflow: hidden; /* Itinatago ang content na lumalampas sa rounded corners. */
-    background-color: #ffffff; /* Ginagawang puti ang accordion content area. */
-}
-
-/* ACCORDION HEADER */
-.accordion-header {
-    display: flex; /* Inilalagay ang title at arrow sa iisang row. */
-    justify-content: space-between; /* Inilalayo ang title at arrow sa magkabilang dulo. */
-    align-items: center; /* Inaayos ang title at arrow sa gitna nang patayo. */
-
-    padding: 15px 18px; /* Naglalagay ng espasyo sa loob ng header. */
-    background-color: #e0efff; /* Itinatakda ang light-blue na kulay ng header. */
-
-    color: #174b8c; /* Itinatakda ang kulay ng accordion title. */
-    font-size: 18px; /* Itinatakda ang laki ng accordion title. */
-    font-weight: bold; /* Ginagawang bold ang accordion title. */
-
-    cursor: pointer; /* Ginagawang pointer ang cursor kapag tinutukan ang header. */
-    list-style: none; /* Tinatanggal ang default marker ng summary. */
-}
-
-/* HIDE DEFAULT ARROW */
-.accordion-header::-webkit-details-marker {
-    display: none; /* Tinatanggal ang default arrow ng browser. */
-}
-
-/* CUSTOM ARROW */
-.chevron {
-    width: 0; /* Walang lapad ang arrow container. */
-    height: 0; /* Walang taas ang arrow container. */
-
-    border-left: 7px solid transparent; /* Gumagawa ng kaliwang bahagi ng triangle. */
-    border-right: 7px solid transparent; /* Gumagawa ng kanang bahagi ng triangle. */
-    border-top: 9px solid #174b8c; /* Gumagawa ng blue triangle na nagsisilbing arrow. */
-
-    transition: transform 0.3s; /* Ginagawang smooth ang pag-ikot ng arrow. */
-}
-
-/* ARROW WHEN OPEN */
-.accordion-item[open] .chevron {
-    transform: rotate(180deg); /* Iniikot ang arrow kapag bukas ang accordion. */
-}
-
-/* ACCORDION CONTENT */
-.accordion-body {
-    padding: 15px 25px; /* Naglalagay ng espasyo sa paligid ng accordion text. */
-    background-color: #ffffff; /* Ginagawang puti ang content area. */
-    text-align: left; /* Inilalagay sa kaliwa ang text. */
-}
-
-/* BULLET LIST */
-.accordion-body ul {
-    list-style-type: disc; /* Ipinapakita ang bilog na bullets. */
-    list-style-position: outside; /* Inilalagay ang bullets sa labas ng text area. */
-
-    margin: 0; /* Tinatanggal ang default na margin ng list. */
-    padding-left: 25px; /* Naglalagay ng espasyo para sa bullets. */
-
-    text-align: left; /* Inilalagay sa kaliwa ang bullet list. */
-}
-
-/* LIST ITEMS */
-.accordion-body li {
-    padding-left: 5px; /* Naglalagay ng pagitan sa pagitan ng bullet at text. */
-    margin-bottom: 8px; /* Naglalagay ng pagitan sa ilalim ng bawat list item. */
-    line-height: 1.5; /* Naglalagay ng sapat na pagitan sa bawat linya ng text. */
-    font-size: 16px; /* Itinatakda ang laki ng accordion content text. */
-}
-
-.accordion-body li:last-child {
-    margin-bottom: 0; /* Tinatanggal ang extra space sa ilalim ng huling list item. */
-}
-
-/* GALLERY PAGE */
-
-.content {
-    width: 100%;
-    text-align: center;
-    padding: 20px 15px 10px;
-}
-
-.content h1 {
-    color: #174b8c;
-    font-size: 32px;
-    margin-bottom: 5px;
-}
-
-.content p {
-    color: #16587b;
-    font-size: 14px;
-    margin: 0;
-}
-
-.main-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px 30px;
-}
-
-.gallery-album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px;
-    padding: 0 10px 30px;
-    text-align: center;
-    background-color: #f7f9f8;
-}
-
-.album-title {
-    color: #174b8c;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-/* CAROUSEL */
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.slides {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: #e0efff;
-    border-radius: 8px;
-}
-
-.slide {
-    position: absolute;
-    inset: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.55);
-    color: white;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* PREVIOUS AND NEXT BUTTONS */
-
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    border: none;
-    border-radius: 50%;
-    background: rgba(22, 88, 123, 0.8);
-    color: white;
-    font-size: 22px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.nav:hover {
-    background: #174b8c;
-}
-
-.prev {
-    left: 12px;
-}
-
-.next {
-    right: 12px;
-}
-
-/* DOTS */
-
-.dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 0;
-}
-
-.dot {
-    width: 11px;
-    height: 11px;
-    border: none;
-    border-radius: 50%;
-    background: #b8cbd8;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #16587b;
-}
-
-/* FOOTER */
-
-.footer {
-    width: 100%;
-    margin-top: auto;
-    background-color: #e0efff;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 25px 30px;
-}
-
-.footer-info {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
-}
-
-.footer-info h2,
-.footer-socials h2 {
-    color: #174b8c;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.footer-info p {
-    color: #16587b;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.footer-socials {
-    flex: 0 0 200px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #16587b;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #174b8c;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    width: 100%;
-    background-color: #16587b;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    font-size: 12px;
-}
-
-/* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 600px) {
-
     .main-container {
         padding: 0 10px 20px;
     }
@@ -609,268 +567,4 @@ body { /* Pipiliin ang body element ng pahina. */
     .footer-socials {
         flex: 1;
     }
-
 }
-/* GALLERY PAGE */
-
-.content {
-    width: 100%;
-    text-align: center;
-    padding: 20px 15px 10px;
-}
-
-.content h1 {
-    color: #174b8c;
-    font-size: 32px;
-    margin-bottom: 5px;
-}
-
-.content p {
-    color: #16587b;
-    font-size: 14px;
-    margin: 0;
-}
-
-.main-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px 30px;
-}
-
-.gallery-album {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1100px;
-    padding: 0 10px 30px;
-    text-align: center;
-    background-color: #f7f9f8;
-}
-
-.album-title {
-    color: #174b8c;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-/* CAROUSEL */
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.slides {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: #e0efff;
-    border-radius: 8px;
-}
-
-.slide {
-    position: absolute;
-    inset: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-
-.slide.active {
-    display: block;
-}
-
-.slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide figcaption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.55);
-    color: white;
-    text-align: center;
-    font-size: 16px;
-}
-
-/* PREVIOUS AND NEXT BUTTONS */
-
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    border: none;
-    border-radius: 50%;
-    background: rgba(22, 88, 123, 0.8);
-    color: white;
-    font-size: 22px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-.nav:hover {
-    background: #174b8c;
-}
-
-.prev {
-    left: 12px;
-}
-
-.next {
-    right: 12px;
-}
-
-/* DOTS */
-
-.dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 0;
-}
-
-.dot {
-    width: 11px;
-    height: 11px;
-    border: none;
-    border-radius: 50%;
-    background: #b8cbd8;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #16587b;
-}
-
-/* FOOTER */
-
-.footer {
-    width: 100%;
-    margin-top: auto;
-    background-color: #e0efff;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 25px 30px;
-}
-
-.footer-info {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
-}
-
-.footer-info h2,
-.footer-socials h2 {
-    color: #174b8c;
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.footer-info p {
-    color: #16587b;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.footer-socials {
-    flex: 0 0 200px;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-links a {
-    color: #16587b;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #174b8c;
-    transform: scale(1.1);
-}
-
-.footer-bottom {
-    width: 100%;
-    background-color: #16587b;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    font-size: 12px;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media screen and (max-width: 600px) {
-
-    .main-container {
-        padding: 0 10px 20px;
-    }
-
-    .content h1 {
-        font-size: 26px;
-    }
-
-    .album-title {
-        font-size: 24px;
-    }
-
-    .carousel {
-        max-width: 100%;
-    }
-
-    .nav {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-        padding: 25px 20px;
-    }
-
-    .footer-info {
-        text-align: center;
-    }
-
-    .footer-socials {
-        flex: 1;
-    }
-
-}
-
