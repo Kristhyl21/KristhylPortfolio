@@ -68,6 +68,16 @@ body { /* Pipiliin ang body element ng pahina. */
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
+.bento-container {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    max-width: 950px;
+    width: 100%;
+}
+
+/* Base Bento Card Style */
 .bento-card {
     background-color: #ffffff;
     border-radius: 20px;
@@ -177,8 +187,15 @@ body { /* Pipiliin ang body element ng pahina. */
 .gallery-card .card-text p {
     color: #ffffff;
 }
-  
-.hero-card {
+
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .hero-card {
         grid-column: 1;
         grid-row: auto;
     }
