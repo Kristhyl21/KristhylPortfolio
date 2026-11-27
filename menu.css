@@ -68,130 +68,127 @@ body { /* Pipiliin ang body element ng pahina. */
     margin: 0;                   /* tinatanggal ang default na margin ng list */
     padding: 0;                   /* tinatanggal ang default na padding ng list */
 }
-/* Main Container Layout */
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  max-width: 1050px;
-  width: 95%;
-  margin: 40px auto; /* Naglalagay ng 40px na espasyo sa itaas at ibaba, at naka-center sa kaliwa/kanan */
-  align-items: center;
+.bento-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Left Profile Card */
-.profile-card {
-  background-color: #0b3c5d; /* Dark teal blue from the updated image */
-  color: #ffffff;
-  padding: 40px 35px;
-  border-radius: 20px;
-  flex: 1.2;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
+/* Hero Card (Main Left Box) */
+.hero-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background: linear-gradient(145deg, #0e3b52, #082636);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 36px 28px;
 }
 
-/* Profile Image Circle - Centered */
-.avatar-container {
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
+.avatar-wrapper {
+    margin-bottom: 16px;
 }
 
 .avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #38b6ff; /* Highlight circle border */
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #20b2aa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.greeting {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #e0e0e0;
-  margin-bottom: 8px;
-}
-
-.name {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.2;
-}
-
-/* Student Badge */
-.badge-container {
-  margin-bottom: 25px;
+.hero-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 .badge {
-  background-color: #178a9c;
-  color: #ffffff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  display: inline-block;
+    background-color: #20b2aa;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
-.bio {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #d1d8e0;
+.hero-bio {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: #d0e4ee;
 }
 
-/* Right Side Navigation Cards */
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
+/* Hover effect for clickable navigation cards */
+.nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 .nav-card {
-  background-color: #ffffff;
-  text-decoration: none;
-  display: flex;
-  align-items: stretch;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.nav-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+/* Icon Styles */
+.card-icon {
+    font-size: 1.6rem;
+    background-color: #e6f4f4;
+    color: #167e78;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
-/* Left colored bar on cards */
-.nav-indicator {
-  width: 6px;
-  background-color: #178a9c;
-  flex-shrink: 0;
+.card-text h2 {
+    font-size: 1.2rem;
+    color: #167e78;
+    margin-bottom: 4px;
 }
 
-.nav-content {
-  padding: 18px 22px;
+.card-text p {
+    font-size: 0.85rem;
+    color: #666;
 }
 
-.nav-content h3 {
-  color: #178a9c;
-  font-size: 1.15rem;
-  margin-bottom: 4px;
-  text-align: center;
+/* Photo Gallery Card (Styled with dark Teal accent) */
+.gallery-card {
+    background: linear-gradient(135deg, #167e78, #0e5450);
+    color: #ffffff;
 }
 
-.nav-content p {
-  color: #6c757d;
-  font-size: 0.88rem;
-  text-align: center;
+.gallery-card .card-text h2,
+.gallery-card .card-text p {
+    color: #ffffff;
 }
-  
-  .profile-card, .nav-menu {
-    width: 100%;
-  }
+
+/* Responsive for Mobile Devices */
+@media (max-width: 768px) {
+    .bento-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .hero-card {
+        grid-column: 1;
+        grid-row: auto;
+    }
 /* PAGE TITLE */
 .page-heading {
     text-align: center; /* Ipinapagitna ang mga heading. */
