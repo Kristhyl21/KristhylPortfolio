@@ -177,15 +177,8 @@ body { /* Pipiliin ang body element ng pahina. */
 .gallery-card .card-text p {
     color: #ffffff;
 }
-
-/* Responsive for Mobile Devices */
-@media (max-width: 768px) {
-    .bento-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .hero-card {
+  
+.hero-card {
         grid-column: 1;
         grid-row: auto;
     }
