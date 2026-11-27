@@ -74,7 +74,8 @@ body { /* Pipiliin ang body element ng pahina. */
   flex-direction: row;
   gap: 30px;
   max-width: 1050px;
-  width: 100%;
+  width: 95%;
+  margin: 40px auto; /* Naglalagay ng 40px na espasyo sa itaas at ibaba, at naka-center sa kaliwa/kanan */
   align-items: center;
 }
 
